@@ -1,0 +1,40 @@
+#include<stdio.h>
+int main()
+{
+    int a[25], i,j,temp,count;
+    
+    // Enter the number of element in an array
+    printf("Enter the size of element: ");
+    scanf("%d",&count);
+    
+    //Enter the elemnet in an array 
+    printf("Enter the elment: ");
+    for (i=1; i<count; i++)
+    {
+        scanf("%d",&a[i]);
+    }
+    
+    
+    //Implementing the Selection short
+     for (i=0; i=count-1; i++)
+    {
+        for(j=i+1; j<count; j++)
+        {
+            if(a[j]<a[i])
+            {
+                temp = a[i];
+                a[i]=a[j];
+                a[j]= temp;
+            }
+        }
+    }
+    
+    
+    // printing the array
+    printf("Sorted element are");
+    for(i=0; i<count; i++)
+    {
+        printf("%d ",a[i]);
+    }
+    
+}
